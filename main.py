@@ -5,6 +5,7 @@ from src.class_vacancy import Vacancy
 
 
 def main():
+
     database_name = 'hh_vacancies'
     file_companies_ids = 'data/companies.json'
 
@@ -13,6 +14,7 @@ def main():
 
     # loading parameters database from database.ini
     params = config()
+
     # create database
     db_manager = DBManager(database_name, params)
     print(f'База SQL {db_manager.name} создана')

@@ -94,6 +94,7 @@ class DBManager:
         """
         This method for inserting data in table of vacancies
         :param vacancies:
+        :param data: list of objects
         :return: None
         """
         conn = psycopg2.connect(**self.params)
