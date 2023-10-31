@@ -4,7 +4,7 @@ import json
 
 class HH_API:
     """
-    This class for getting information from headhunter API
+    This class for getting information from headhanter API
     """
     HH_API_URL = 'https://api.hh.ru/vacancies'
 
@@ -34,5 +34,4 @@ class HH_API:
                 response = requests.get(self.HH_API_URL, params)
                 response_data = json.loads(response.text)
                 result.extend(response_data['items'])
-
         return result

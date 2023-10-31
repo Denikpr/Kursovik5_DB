@@ -93,7 +93,6 @@ class DBManager:
     def insert_data_vacancy(self, vacancies: list):
         """
         This method for inserting data in table of vacancies
-        :param vacancies:
         :param data: list of objects
         :return: None
         """
@@ -188,8 +187,7 @@ class DBManager:
         cur.execute(f'''SELECT company_name, vacancy_name, salary_average, url
         FROM vacancies
         JOIN companies USING (company_id_hh)
-        WHERE vacancy_name LIKE '%{word.lower()}%' OR vacancy_name LIKE '%{word.title()}%' 
-        OR vacancy_name LIKE '%{word.upper()}%';''')
+        WHERE vacancy_name LIKE '%{word.lower()}%' OR vacancy_name LIKE '%{word.title()}%' OR vacancy_name LIKE '%{word.upper()}%';''')
         pprint(cur.fetchall())
         cur.close()
         conn.close()

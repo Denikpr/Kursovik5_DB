@@ -91,7 +91,6 @@ Url - {self.url}
     def check_for_availability(vacancy_information: dict, param1: str, param2: str = None, param3: str = None):
         """
         This staticmethod use during creating object Vacancy. Checking param for availability.
-        :param param3:
         :param vacancy_information: dict
         :param param1: str
         :param param2: str
